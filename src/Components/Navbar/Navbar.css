@@ -1,0 +1,178 @@
+/* Navbar.css */
+nav {
+    width: 100vw;           /* Ensure full viewport width */
+    left: 0;
+    min-width: 0;
+    display: flex;          /* Add this if not present */
+    align-items: center;    /* Vertically center items */
+    justify-content: space-between;
+    padding: 10px 2%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;           /* Make sure it's above other content */
+}
+
+.nav-left .menu-icon {
+    width: 22px;
+    margin-right: 25px;
+}
+
+.nav-left .logo {
+    width: 130px;
+}
+
+.nav-middle .search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 8px 12px;
+  margin-right: 15px;
+  background: #fff;
+}
+
+.nav-middle .search-box input {
+    border: 0;
+    outline: 0;
+    width: 400px;
+    font-size: 16px;
+    background: transparent;
+}
+
+.nav-middle .search-box img {
+    width: 15px;
+}
+
+/* Style the mic icon for proper spacing and alignment */
+.mic-icon {
+  width: 24px;
+  height: 24px;
+  margin: 0 8px 0 8px;
+  cursor: pointer;
+  transition: filter 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-right img {
+    width: 25px;
+    margin-right: 25px;
+}
+
+.nav-right .user-icon {
+    width: 35px;
+    border-radius: 50%;
+}
+@media (max-width: 900px) {
+    
+    .menu-icon {
+        display: none;
+    }
+
+    .nav-right img {
+        display: none;
+    }
+
+    .nav-right .user-icon {
+        display: block;
+        width: 30px;
+    }
+
+    .logo {
+        width: 90px;
+    }
+
+    .nav-middle .search-box input {
+        width: 100px;
+    }
+}
+
+/* Add to Navbar.css */
+.mic-icon.listening {
+  filter: drop-shadow(0 0 4px #cc0000);
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1);}
+  50% { transform: scale(1.15);}
+  100% { transform: scale(1);}
+}
+
+/* Optional: Style the search icon for spacing */
+.nav-middle .search-box button img {
+  width: 24px;
+  height: 24px;
+  margin-left: 4px;
+}
+
+/* Style the mic button like YouTube */
+.mic-btn {
+  background: #f2f2f2;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-left: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: none;
+  padding: 0;
+}
+
+.mic-btn:hover, .mic-btn.listening {
+  background: #e5e5e5;
+}
+
+.mic-icon {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  display: block;
+}
+
+/* Adjust search box to not include mic inside */
+.nav-middle .search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 8px 12px;
+  margin-right: 0;
+  background: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .nav-middle .search-box {
+    padding: 4px 6px;
+  }
+  .nav-middle .search-box input {
+    width: 80px;
+    font-size: 13px;
+  }
+  .mic-icon {
+    width: 20px;
+    height: 20px;
+    margin: 0 4px 0 4px;
+  }
+  .mic-btn {
+    width: 32px;
+    height: 32px;
+    margin-left: 6px;
+  }
+  .mic-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+
+
