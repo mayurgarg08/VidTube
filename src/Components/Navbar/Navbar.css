@@ -9,7 +9,7 @@ nav {
     padding: 10px 2%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     background: #fff;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 100;           /* Make sure it's above other content */
 }
